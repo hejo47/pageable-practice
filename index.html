@@ -64,7 +64,24 @@
           </div>
         </section>
       </div>
-      <div data-anchor="section2" class="section bgc3"></div>
+      <div data-anchor="section2" class="section bgc3">
+        <div class="hidden-text">
+          <p>Hidden Hidden Hidden Hidden Hidden</p>
+          <ul class="tag-wrap">
+            <li class="show">One</li>
+            <li class="show">Two</li>
+            <li class="show">Three</li>
+            <li class="show">Four</li>
+            <li class="show">Five</li>
+            <li class="show">Six</li>
+            <li class="show">Seven</li>
+            <li class="show">Eight</li>
+            <li class="show">Nine</li>
+            <li class="show">Ten</li>
+            <li class="show">Eleven</li>
+          </ul>
+        </div>
+      </div>
       <div data-anchor="section3" class="section bgc4"></div>
     </div>
 
@@ -81,6 +98,10 @@
           pips: true,
           animation: 800,
           orientation: "horizontal",
+        });
+        const tag = $(".tag-wrap li");
+        tag.on("mouseenter", function () {
+          $(this).removeClass("show");
         });
       });
     </script>
