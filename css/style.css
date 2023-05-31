@@ -1,0 +1,161 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  letter-spacing: -0.03em;
+  box-sizing: border-box;
+  font-family: "Montserrat", "Pretendard-Regular";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
+body::-webkit-scrollbar {
+  display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+.container {
+  width: 100%;
+  max-width: 1920px;
+  padding: 0 20px;
+  height: 100%;
+  margin: 0 auto;
+}
+.pg-wrapper {
+  padding-bottom: 0 !important;
+  overflow-x: unset !important;
+}
+.section {
+  width: 100%;
+  height: 100%;
+}
+.bgc1 {
+  background-color: navy;
+}
+.bgc2 {
+  background-color: lightcoral;
+}
+.bgc3 {
+  background-color: palevioletred;
+}
+.bgc4 {
+  background-color: slateblue;
+}
+.line-con {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+}
+.line-con .line {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100%;
+  background: #e5eaec;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+.line-con .line.line1 {
+  left: calc((100%) / 6 * 0);
+}
+.line-con .line.line2 {
+  left: calc((100%) / 6 * 1);
+}
+.line-con .line.line3 {
+  left: calc((100%) / 6 * 2);
+}
+.line-con .line.line4 {
+  left: calc((100%) / 6 * 3);
+}
+.line-con .line.line5 {
+  left: calc((100%) / 6 * 4);
+}
+.line-con .line.line6 {
+  left: calc((100%) / 6 * 5);
+}
+.line-con .line.line7 {
+  left: calc((100%) / 6 * 6);
+}
+.cover {
+  position: relative;
+  background-image: url(../img/cover.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.cover-slider {
+  width: 100%;
+  height: 100%;
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cover-button {
+  width: calc((100% - 40px) / 3);
+  height: 100%;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cover-box {
+  width: 15vw;
+  height: 20vw;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+  transition: 0.8s ease all;
+  position: relative;
+}
+.cover-box:hover {
+  background-color: #fff;
+}
+.cover-button:nth-of-type(2n) .cover-box {
+  margin-top: 80px;
+}
+.cover-button .cover-box::after {
+  position: absolute;
+  bottom: -20%;
+  font-size: 12vh;
+  font-family: "Pretendard-Regular";
+  -webkit-text-stroke: 1px #fff;
+  transition: 0.8s ease all;
+}
+.cover-button:nth-of-type(1) .cover-box::after {
+  content: "1";
+  left: 15%;
+}
+.cover-button:nth-of-type(2) .cover-box::after {
+  content: "2";
+  left: 30%;
+}
+.cover-button:nth-of-type(3) .cover-box::after {
+  content: "3";
+  left: 70%;
+}
+.cover-button:nth-of-type(1) .cover-box:hover::after {
+  left: 0%;
+}
+.cover-button:nth-of-type(2) .cover-box:hover::after {
+  left: 15%;
+}
+.cover-button:nth-of-type(3) .cover-box:hover::after {
+  left: 90%;
+}
