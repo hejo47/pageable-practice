@@ -23,12 +23,53 @@ body {
 body::-webkit-scrollbar {
   display: none; /* 크롬, 사파리, 오페라, 엣지 */
 }
+a {
+  color: #333;
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
 .container {
   width: 100%;
   max-width: 1920px;
   padding: 0 20px;
-  height: 100%;
+  height: 100vh;
   margin: 0 auto;
+}
+.header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.header-container {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+.header .logo {
+  color: #fff;
+}
+.header .gnb {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 50px;
+}
+.header .gnb li a {
+  display: block;
+  color: #fff;
+  font-size: 18px;
 }
 .pg-wrapper {
   padding-bottom: 0 !important;
@@ -37,9 +78,10 @@ body::-webkit-scrollbar {
 .section {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 .bgc1 {
-  background-color: navy;
+  background-color: skyblue;
 }
 .bgc2 {
   background-color: lightcoral;
@@ -50,6 +92,36 @@ body::-webkit-scrollbar {
 .bgc4 {
   background-color: slateblue;
 }
+@keyframes marquee {
+  from {
+    margin: 0;
+  }
+
+  to {
+    margin: 0 0 0 -100%;
+  }
+}
+.marquee {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.marquee p {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 10vw;
+  font-weight: 900;
+  line-height: 7vw;
+  margin: 0;
+  padding: 0;
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  animation: marquee 6s infinite linear;
+}
+
 .line-con {
   width: 100%;
   height: 100%;
@@ -90,9 +162,10 @@ body::-webkit-scrollbar {
 }
 .cover {
   position: relative;
-  background-image: url(../img/cover.jpg);
+  /* background-image: url(../img/cover.jpg);
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat; */
 }
 .cover-slider {
   width: 100%;
@@ -114,8 +187,8 @@ body::-webkit-scrollbar {
   align-items: center;
 }
 .cover-box {
-  width: 15vw;
-  height: 20vw;
+  width: 18vw;
+  height: 23vw;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -133,9 +206,10 @@ body::-webkit-scrollbar {
 .cover-button .cover-box::after {
   position: absolute;
   bottom: -20%;
-  font-size: 12vh;
+  font-size: 15vh;
   font-family: "Pretendard-Regular";
-  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke: 0.5px #fff;
+  color: skyblue;
   transition: 0.8s ease all;
 }
 .cover-button:nth-of-type(1) .cover-box::after {
@@ -144,17 +218,17 @@ body::-webkit-scrollbar {
 }
 .cover-button:nth-of-type(2) .cover-box::after {
   content: "2";
-  left: 30%;
+  left: 25%;
 }
 .cover-button:nth-of-type(3) .cover-box::after {
   content: "3";
   left: 70%;
 }
 .cover-button:nth-of-type(1) .cover-box:hover::after {
-  left: 0%;
+  left: -10%;
 }
 .cover-button:nth-of-type(2) .cover-box:hover::after {
-  left: 15%;
+  left: 5%;
 }
 .cover-button:nth-of-type(3) .cover-box:hover::after {
   left: 90%;
